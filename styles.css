@@ -6,6 +6,7 @@ body {
     background: url('radolfzell.jpg') no-repeat center center fixed;
     background-size: cover;
     position: relative;
+    line-height: 1.6; /* Verbessert die Lesbarkeit */
 }
 
 /* Overlay für bessere Lesbarkeit */
@@ -16,12 +17,12 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Dunkler Overlay */
+    background: rgba(0, 0, 0, 0.5); /* Etwas dunkler für Kontrast */
     z-index: -1;
 }
 
 header {
-    background: rgba(118, 181, 197, 0.8); /* Transparenter Header */
+    background: rgba(118, 181, 197, 0.85); /* Etwas weniger Transparenz für Eleganz */
     color: #fff;
     text-align: center;
     padding: 40px 20px;
@@ -40,6 +41,7 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
+    justify-content: flex-end; /* Bessere Ausrichtung */
 }
 
 nav ul li {
@@ -52,27 +54,59 @@ nav ul li a {
     font-weight: bold;
     padding: 8px 15px;
     border-radius: 20px;
-    transition: background 0.3s;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 nav ul li a:hover {
     background: rgba(255, 255, 255, 0.3);
+    color: #f0f0f0; /* Leichter Farbwechsel für Eleganz */
 }
 
-h1, h2 {
+h1 {
+    font-size: 2.5em; /* Größer für Wirkung */
     margin: 0;
     padding: 10px 0;
 }
 
-section {
-    max-width: 800px;
-    margin: 40px auto;
-    background: rgba(255, 255, 255, 0.9); /* Leicht transparente Box */
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+h2 {
+    font-size: 1.8em;
+    margin: 0 0 20px 0; /* Mehr Abstand nach unten */
+    color: #76b5c5; /* Farbe passend zum Theme */
 }
 
+section {
+    max-width: 900px; /* Etwas breiter für bessere Darstellung */
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.95); /* Weniger Transparenz für Lesbarkeit */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15); /* Sanfterer Schatten */
+}
+
+/* Styling für Behandlungsabschnitte */
+.treatment {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.treatment h3 {
+    font-size: 1.4em;
+    color: #5a9ea0; /* Dunklere Akzentfarbe */
+    margin: 0 0 10px 0;
+}
+
+.treatment p {
+    font-size: 1.1em;
+    color: #555;
+    margin: 5px 0;
+}
+
+.treatment p strong {
+    color: #333; /* Dunkler für Preise */
+}
+
+/* Standard-Listen (falls verwendet) */
 ul {
     list-style: none;
     padding: 0;
@@ -85,9 +119,12 @@ li {
     color: #555;
 }
 
+/* Kontaktformular */
 form {
     display: flex;
     flex-direction: column;
+    max-width: 500px; /* Begrenzte Breite für Übersichtlichkeit */
+    margin: 0 auto;
 }
 
 input, textarea {
@@ -96,8 +133,19 @@ input, textarea {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
-    background: #f4f4f4;
+    background: #f9f9f9; /* Etwas heller */
     color: #333;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #76b5c5; /* Akzentfarbe bei Fokus */
+    outline: none;
+}
+
+textarea {
+    min-height: 120px; /* Mindesthöhe für Nachrichtenfeld */
+    resize: vertical; /* Nur vertikale Größenänderung */
 }
 
 button {
@@ -108,18 +156,54 @@ button {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    transition: background 0.3s;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
     background: #5a9ea0;
+    transform: translateY(-2px); /* Leichter Hover-Effekt */
+}
+
+button:active {
+    transform: translateY(0); /* Zurück beim Klicken */
 }
 
 footer {
     text-align: center;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8); /* Dunkler für Kontrast */
     color: #fff;
     margin-top: 40px;
     font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        position: static;
+        margin-bottom: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    section {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
 }
