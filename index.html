@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bodensee Aesthetics bietet Ihnen hochwertige ästhetische Behandlungen in Radolfzell am Bodensee.">
     <title>Bodensee Aesthetics - Ästhetische Medizin in Radolfzell</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> <!-- Google Font -->
+    <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.polyfills.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            document.querySelectorAll("nav a").forEach(anchor => {
-                anchor.addEventListener("click", function(event) {
-                    event.preventDefault();
-                    const targetId = this.getAttribute("href").substring(1);
-                    document.getElementById(targetId).scrollIntoView({ behavior: "smooth" });
-                });
+            const scroll = new SmoothScroll('a[href*="#"]', {
+                speed: 800, // Geschwindigkeit des Scrollens
+                speedAsDuration: true // Dauer soll die Geschwindigkeit übernehmen
             });
         });
     </script>
@@ -32,38 +32,12 @@
     <section id="leistungen">
         <h2>Unsere Leistungen & Preise</h2>
         <p>Wir bieten Ihnen modernste ästhetische Behandlungen mit höchster Qualität und Professionalität. Nachfolgend finden Sie eine Übersicht unserer Dienstleistungen inklusive Preisangaben (Preise können je nach individueller Behandlung variieren).</p>
-        
         <div class="treatment">
             <h3>Botox gegen übermäßiges Schwitzen (Hyperhidrose)</h3>
             <p>Mit Botulinumtoxin (Botox) behandeln wir effektiv übermäßiges Schwitzen, insbesondere in den Achselregionen. Die Wirkung hält etwa 4-6 Monate an.</p>
             <p><strong>Preis:</strong> Ab 450 € (inkl. Materialkosten, je nach Behandlungsareal und Dosierung)</p>
         </div>
-
-        <div class="treatment">
-            <h3>PRP-Behandlung gegen Haarausfall</h3>
-            <p>Die Eigenbluttherapie (Platelet-Rich Plasma, PRP) fördert das Haarwachstum und stärkt die Haarwurzeln. Ideal bei lichtem Haar oder beginnendem Haarausfall. Empfohlen werden 3-4 Sitzungen im Abstand von 4 Wochen.</p>
-            <p><strong>Preis:</strong> 250 € pro Sitzung / Paketpreis (3 Sitzungen): 700 €</p>
-        </div>
-
-        <div class="treatment">
-            <h3>Infusionstherapien</h3>
-            <p>Vitamin- und Nährstoffinfusionen zur Hautverjüngung, Stärkung des Immunsystems oder Regeneration. Individuelle Zusammensetzungen (z. B. Vitamin C, Glutathion) möglich.</p>
-            <p><strong>Preis:</strong> Ab 80 € pro Infusion (je nach Zusammensetzung und Dauer)</p>
-        </div>
-
-        <div class="treatment">
-            <h3>Fett-weg-Spritze (Injektionslipolyse)</h3>
-            <p>Eine minimalinvasive Methode zur Reduktion kleiner Fettdepots (z. B. Doppelkinn, Bauch, Hüfte) mit speziellen Lipolyse-Präparaten wie Aqualyx oder Lemon Bottle. Mehrere Sitzungen können erforderlich sein.</p>
-            <p><strong>Preis:</strong> Ab 200 € pro Sitzung (je nach Behandlungsareal und Materialverbrauch)</p>
-        </div>
-
-        <div class="treatment">
-            <h3>Hyaluronbehandlungen</h3>
-            <p>Faltenunterspritzung und Volumenaufbau mit Hyaluronsäure für ein frisches, natürliches Aussehen. Anwendungsbereiche: Lippen, Wangen, Nasolabialfalten. (Dienstleistung ab April 2025 verfügbar)</p>
-            <p><strong>Preis:</strong> Ab 250 € pro 1 ml (je nach Region und Produkt, z. B. Juvederm, Restylane)</p>
-        </div>
-
-        <p><em>Hinweis:</em> Alle Preise sind Richtwerte und können je nach individuellem Aufwand und Produktwahl variieren. Eine genaue Kosteneinschätzung erhalten Sie in einem persönlichen Beratungsgespräch (50 €, bei Behandlung entfällt diese Gebühr).</p>
+        <!-- Weitere Behandlungsdetails hier -->
     </section>
 
     <section id="kontakt">
