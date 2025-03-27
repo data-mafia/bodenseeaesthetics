@@ -2,16 +2,31 @@ body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa;
     color: #444;
+    background: url('radolfzell.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+/* Overlay für bessere Lesbarkeit */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dunkler Overlay */
+    z-index: -1;
 }
 
 header {
-    background: linear-gradient(135deg, #76b5c5, #d4a5a5);
+    background: rgba(118, 181, 197, 0.8); /* Transparenter Header */
     color: #fff;
     text-align: center;
     padding: 40px 20px;
     position: relative;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 nav {
@@ -52,7 +67,7 @@ h1, h2 {
 section {
     max-width: 800px;
     margin: 40px auto;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.9); /* Leicht transparente Box */
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -103,7 +118,7 @@ button:hover {
 footer {
     text-align: center;
     padding: 20px;
-    background: #333;
+    background: rgba(0, 0, 0, 0.7);
     color: #fff;
     margin-top: 40px;
     font-size: 14px;
